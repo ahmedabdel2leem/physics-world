@@ -201,7 +201,7 @@ const wall1Body = new CANNON.Body({
     mass: 0 // static body
 })
 wall1Body.addShape(wallShape)
-wall1Body.position.set(-5, 2.5, 0)
+wall1Body.position.set(-4.9, 2.5, 0)
 wall1Body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), Math.PI * 0.5)
 wall1Body.material = defaultMaterial
 world.addBody(wall1Body)
@@ -211,7 +211,7 @@ const wall2Body = new CANNON.Body({
     mass: 0 // static body
 })
 wall2Body.addShape(wallShape)
-wall2Body.position.set(5, 2.5, 0)
+wall2Body.position.set(4.9, 2.5, 0)
 wall2Body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), -Math.PI * 0.5)
 wall2Body.material = defaultMaterial
 world.addBody(wall2Body)
@@ -221,7 +221,7 @@ const wall3Body = new CANNON.Body({
     mass: 0 // static body
 })
 wall3Body.addShape(wallShape)
-wall3Body.position.set(0, 2.5, 5)
+wall3Body.position.set(0, 2.5, 4.9)
 wall3Body.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), Math.PI)
 wall3Body.material = defaultMaterial
 world.addBody(wall3Body)
@@ -231,7 +231,7 @@ const wall4Body = new CANNON.Body({
     mass: 0 // static body
 })
 wall4Body.addShape(wallShape)
-wall4Body.position.set(0, 2.5, -5)
+wall4Body.position.set(0, 2.5, -4.9)
 wall4Body.material = defaultMaterial
 world.addBody(wall4Body)
 /**
