@@ -26,8 +26,21 @@ debugObject.createCube = () => {
             y:1,
             z:Math.random()*3} )
 }
+debugObject.reset = () => {
+    ObjectsToUpdate.forEach(object => {
+        //remove
+        object.body.removeEventListener('collide', playHitsound)
+        world.removeBody(object.body)
+
+
+        //remove from the scene
+        scene.remove(object.mesh)
+    })
+    ObjectsToUpdate.splice(0, ObjectsToUpdate.length)
+}
 gui.add(debugObject, 'createSphere').name('Create Sphere')
 gui.add(debugObject, 'createCube').name('Create Cube')
+gui.add(debugObject, 'reset').name('Reset')
 /**
  * Base
  */
